@@ -2,12 +2,12 @@
 
 ## js版本
 
-#### 解释navigator.clipboard
+#### 解释[`navigator.clipboard`](https://developer.mozilla.org/zh-CN/docs/Web/API/Navigator/clipboard)
 > 剪贴板 [Clipboard](https://developer.mozilla.org/zh-CN/docs/Web/API/Clipboard_API) API 为 [Navigator](https://developer.mozilla.org/zh-CN/docs/Web/API/Navigator) 接口添加了只读属性 `clipboard`，该属性返回一个可以读写剪切板内容的 [Clipboard](https://developer.mozilla.org/zh-CN/docs/Web/API/Clipboard) 对象。在 Web 应用中，剪切板 API 可用于实现**剪切、复制、粘贴**的功能。
 > 
 > 只有在用户事先**授予网站或应用**对剪切板的**访问许可**之后，才能使用**异步**剪切板读写方法。许可操作必须通过取得权限 [Permissions API](https://developer.mozilla.org/zh-CN/docs/Web/API/Permissions_API) 的 `"clipboard-read"` 和/或 `"clipboard-write"` 项获得。
 
-#### 解释document.execCommand
+#### 解释[`document.execCommand`](https://developer.mozilla.org/zh-CN/docs/Web/API/Document/execCommand)
 `已弃用: 不再推荐使用该特性。虽然一些浏览器仍然支持它，但也许已从相关的 web 标准中移除，也许正准备移除或出于兼容性而保留。请尽量不要使用该特性，并更新现有的代码；参见本页面底部的兼容性表格以指导你作出决定。请注意，该特性随时可能无法正常工作。`
 
 > 当一个 HTML 文档切换到设计模式时，`document`暴露 `execCommand` 方法，该方法允许运行命令来操纵[可编辑内容区域](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Global_attributes/contenteditable)的元素。
@@ -52,16 +52,16 @@ export const copy = value => {
 }
 ```
 
-## vue2指令版本
+## [vue2指令版本](https://v2.cn.vuejs.org/v2/guide/custom-directive.html)
 
-#### 解释其中使用的钩子函数
+#### 解释其中使用的[钩子函数](https://v2.cn.vuejs.org/v2/guide/custom-directive.html#%E9%92%A9%E5%AD%90%E5%87%BD%E6%95%B0)
 > `bind`：**只调用一次**，指令第一次绑定到元素时调用。在这里可以进行一次性的初始化设置。
 > `componentUpdated`：指令所在**组件的 VNode 及其子 VNode 全部更新**后调用。
 > `unbind`：**只调用一次**，指令与元素**解绑时**调用。
 > 
 > 还有一些没使用的钩子请参考[官网钩子函数](https://v2.cn.vuejs.org/v2/guide/custom-directive.html#%E9%92%A9%E5%AD%90%E5%87%BD%E6%95%B0)
 
-#### 解释钩子函数参数
+#### 解释[钩子函数参数](https://v2.cn.vuejs.org/v2/guide/custom-directive.html#%E9%92%A9%E5%AD%90%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0)
 > `el`：指令所绑定的元素，可以用来直接操作 **DOM**。
 > `binding`：一个对象，包含以下 property：
 > * `value`：指令的绑定值，例如：`v-my-directive="1 + 1"` 中，绑定值为 `2`。
@@ -120,16 +120,16 @@ export default {
 }
 ```
 
-## vue3指令版本
+## [vue3指令版本](https://cn.vuejs.org/guide/reusability/custom-directives.html)
 
-#### 解释其中使用的钩子函数
+#### 解释其中使用的[钩子函数](https://cn.vuejs.org/guide/reusability/custom-directives.html#directive-hooks)
 > `mounted`：在绑定元素的**父组件及他自己的所有子节点**都**挂载完成后**调用
 > `updated`：在绑定元素的**父组件及他自己的所有子节点都更新后**调用
 > `unmounted`：绑定元素的**父组件卸载后**调用
 >
 > 还有一些没解释的钩子函数请参考[官网指令钩子](https://cn.vuejs.org/guide/reusability/custom-directives.html#directive-hooks)
 
-#### 解释钩子函数参数
+#### 解释[钩子函数参数](https://cn.vuejs.org/guide/reusability/custom-directives.html#hook-arguments)
 > `el`：指令绑定到的元素。这可以用于直接操作 **DOM**。
 > `binding`：一个对象，包含以下属性。
 > * `value`：传递给指令的值。例如在 `v-my-directive="1 + 1"` 中，值是 `2`。
