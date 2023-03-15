@@ -1,6 +1,6 @@
 # 复制文本
 
-## js版本
+## [js版本](https://github.com/Pedro-Que/dysfunction/blob/main/CopyText/js/copy.js)
 
 #### 解释[`navigator.clipboard`](https://developer.mozilla.org/zh-CN/docs/Web/API/Navigator/clipboard)
 > 剪贴板 [Clipboard](https://developer.mozilla.org/zh-CN/docs/Web/API/Clipboard_API) API 为 [Navigator](https://developer.mozilla.org/zh-CN/docs/Web/API/Navigator) 接口添加了只读属性 `clipboard`，该属性返回一个可以读写剪切板内容的 [Clipboard](https://developer.mozilla.org/zh-CN/docs/Web/API/Clipboard) 对象。在 Web 应用中，剪切板 API 可用于实现**剪切、复制、粘贴**的功能。
@@ -52,7 +52,7 @@ export const copy = value => {
 }
 ```
 
-## ts版本
+## [ts版本](https://github.com/Pedro-Que/dysfunction/blob/main/CopyText/ts/copy.ts)
 
 跟js版本差不多，这里就不做过多的解释了。
 
@@ -94,7 +94,7 @@ export const copy = (value: string) => {
 }
 ```
 
-## [vue2指令版本](https://v2.cn.vuejs.org/v2/guide/custom-directive.html)
+## [vue2指令版本](https://github.com/Pedro-Que/dysfunction/blob/main/CopyText/js/vue2-directives/copy.js)
 
 #### 解释其中使用的[钩子函数](https://v2.cn.vuejs.org/v2/guide/custom-directive.html#%E9%92%A9%E5%AD%90%E5%87%BD%E6%95%B0)
 > `bind`：**只调用一次**，指令第一次绑定到元素时调用。在这里可以进行一次性的初始化设置。
@@ -162,7 +162,7 @@ export default {
 }
 ```
 
-## vue2+ts指令版本
+## [vue2+ts指令版本](https://github.com/Pedro-Que/dysfunction/blob/main/CopyText/ts/vue2-directives/copy.ts)
 
 跟vue2指令版本差不多，这里就不做过多的解释了。
 
@@ -227,7 +227,7 @@ const copy: Directive = {
 export default copy
 ```
 
-## [vue3指令版本](https://cn.vuejs.org/guide/reusability/custom-directives.html)
+## [vue3指令版本](https://github.com/Pedro-Que/dysfunction/blob/main/CopyText/js/vue3-directives/copy.js)
 
 #### 解释其中使用的[钩子函数](https://cn.vuejs.org/guide/reusability/custom-directives.html#directive-hooks)
 > `mounted`：在绑定元素的**父组件及他自己的所有子节点**都**挂载完成后**调用
@@ -295,7 +295,7 @@ export default {
 }
 ```
 
-## vue3+ts指令版本
+## [vue3+ts指令版本](https://github.com/Pedro-Que/dysfunction/blob/main/CopyText/ts/vue3-directives/copy.ts)
 
 跟vue3指令版本差不多，这里就不做过多的解释了。
 
