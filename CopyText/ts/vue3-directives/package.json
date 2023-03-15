@@ -1,0 +1,8 @@
+{
+  "name": "vue3-directives",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "vue": "^3.2.47"
+  }
+}

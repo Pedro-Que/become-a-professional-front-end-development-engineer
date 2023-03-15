@@ -1,0 +1,8 @@
+{
+  "name": "vue2-directives",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "vue": "^2.7.14"
+  }
+}

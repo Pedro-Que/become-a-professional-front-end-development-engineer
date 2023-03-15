@@ -8,7 +8,7 @@ export default {
       if (!el.$value) return console.log('无复制内容')
       // 判断当前环境是否支持navigator.clipboard 对象
       if (navigator.clipboard && window.isSecureContext) {
-        navigator.clipboard.writeText(value).then(() => {
+        navigator.clipboard.writeText(el.$value).then(() => {
           console.log('复制成功')
         }).catch(() => {
           console.log('复制失败')
