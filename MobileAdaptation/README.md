@@ -162,7 +162,9 @@ meta viewport 元标签的常用属性包括：
 
 基于`rem`单位的定义，我们只需要控制不同设备下的`html`的`font-size`大小便可以实现适配，对于不需要做适配的属性值我们依然使用`px`作为单位。
 
-##### js方法
+##### [js方法](https://github.com/Pedro-Que/dysfunction/blob/main/MobileAdaptation/js.html)
+
+通过js动态获取当前布局视口的宽度除以我们预定的值，得到并设置不同设备下`html`的`font-size`的大小
 
 ```html
 <!DOCTYPE html>
@@ -214,3 +216,5 @@ meta viewport 元标签的常用属性包括：
 ![iPhone5效果如图所示](https://upload-images.jianshu.io/upload_images/19735956-af1b730e5b82b645.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 OK！这里我们可以看到，选择不同设备进行测试时，根节点的`font-size`会随着设备的布局视口的宽度变化而变化，所以这里的元素宽度15rem永远等于当前布局视口的宽度，`font-size`也会随设备变化而变化。这就是所谓的移动端适配，其实这种方案最早是由阿里提出来的一个开源移动端适配解决方案`flexible`，原理非常简单。
+
+##### css媒体查询
