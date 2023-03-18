@@ -209,8 +209,8 @@ meta viewport 元标签的常用属性包括：
 </html>
 ```
 
-![iPhone6效果如图所示](https://upload-images.jianshu.io/upload_images/19735956-597ec7b3d1810d93.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![iPhone6效果如图所示](https://upload-images.jianshu.io/upload_images/19735956-9e19301c8eee54f6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-![iPhone5效果如图所示](https://upload-images.jianshu.io/upload_images/19735956-49de10340b44783d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![iPhone5效果如图所示](https://upload-images.jianshu.io/upload_images/19735956-af1b730e5b82b645.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 OK！这里我们可以看到，选择不同设备进行测试时，根节点的`font-size`会随着设备的布局视口的宽度变化而变化，所以这里的元素宽度15rem永远等于当前布局视口的宽度，`font-size`也会随设备变化而变化。这就是所谓的移动端适配，其实这种方案最早是由阿里提出来的一个开源移动端适配解决方案`flexible`，原理非常简单。
