@@ -208,3 +208,5 @@ meta viewport 元标签的常用属性包括：
 
 </html>
 ```
+
+![效果如图所示](https://upload-images.jianshu.io/upload_images/19735956-597ec7b3d1810d93.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
