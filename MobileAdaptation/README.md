@@ -159,3 +159,52 @@ meta viewport 元标签的常用属性包括：
 #### rem适配
 
 > rem（root em）是CSS3新增的一个相对单位，是指相对于根元素字体大小的单位，它的大小是相对于文档根元素的字体大小而定的。
+
+基于`rem`单位的定义，我们只需要控制不同设备下的`html`的`font-size`大小便可以实现适配，对于不需要做适配的属性值我们依然使用`px`作为单位。
+
+##### js方法
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .box {
+      width: 8rem;
+      height: 4rem;
+      font-size: .8rem;
+      background: #43c985;
+    }
+  </style>
+  <script>
+    function setRootRem() {
+      const root = document.documentElement
+      /**
+       * 以iPhone6为例，布局视口为375px，我们把它分成15份，则1rem = 25px
+       * 这时UI给定的一个的宽为200px（设备独立像素）
+       * 我们只需要将它设置为100 / 25 = 4rem
+       */
+      const scale = root.clientWidth / 15
+      root.style.fontSize = `${scale}px`
+    }
+    setRootRem()
+    window.addEventListener('resize', setRootRem)
+  </script>
+</head>
+
+<body>
+  <div class="box">PedroQue99</div>
+</body>
+
+</html>
+```
