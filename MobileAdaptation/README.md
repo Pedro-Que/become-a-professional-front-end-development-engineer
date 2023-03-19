@@ -218,3 +218,73 @@ meta viewport 元标签的常用属性包括：
 OK！这里我们可以看到，选择不同设备进行测试时，根节点的`font-size`会随着设备的布局视口的宽度变化而变化，所以这里的元素宽度15rem永远等于当前布局视口的宽度，`font-size`也会随设备变化而变化。这就是所谓的移动端适配，其实这种方案最早是由阿里提出来的一个开源移动端适配解决方案`flexible`，原理非常简单。
 
 ##### css媒体查询
+
+使用css媒体查询直接设置一些常用设备下的`html`的`font-size`大小。
+
+```css
+@media (min-width:240px) {
+  html {
+    font-size: 16px
+  }
+}
+
+@media (min-width:320px) {
+  html {
+    font-size: 21.33333333px
+  }
+}
+
+@media (min-width:360px) {
+  html {
+    font-size: 24px
+  }
+}
+
+@media (min-width:375px) {
+  html {
+    font-size: 25px
+  }
+}
+
+@media (min-width:384px) {
+  html {
+    font-size: 25.6px
+  }
+}
+
+@media (min-width:400px) {
+  html {
+    font-size: 26.66666667px
+  }
+}
+
+@media (min-width:411px) {
+  html {
+    font-size: 27.4px
+  }
+}
+
+@media (min-width:414px) {
+  html {
+    font-size: 27.6px
+  }
+}
+
+@media (min-width:424px) {
+  html {
+    font-size: 28.26666667px
+  }
+}
+
+@media (min-width:480px) {
+  html {
+    font-size: 32px
+  }
+}
+
+@media (min-width:540px) {
+  html {
+    font-size: 36px
+  }
+}
+```
