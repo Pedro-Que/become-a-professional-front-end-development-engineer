@@ -156,13 +156,13 @@ meta viewport 元标签的常用属性包括：
 
 `页面缩放系数 = CSS像素 / 设备独立像素`
 
-#### rem适配
+#### [rem适配](https://github.com/Pedro-Que/become-a-professional-front-end-development-engineer/tree/main/MobileAdaptation/rem)
 
 > rem（root em）是CSS3新增的一个相对单位，是指相对于根元素字体大小的单位，它的大小是相对于文档根元素的字体大小而定的。
 
 基于`rem`单位的定义，我们只需要控制不同设备下的`html`的`font-size`大小便可以实现适配，对于不需要做适配的属性值我们依然使用`px`作为单位。
 
-##### [js方法](https://github.com/Pedro-Que/dysfunction/blob/main/MobileAdaptation/js.html)
+##### [js方法](https://github.com/Pedro-Que/become-a-professional-front-end-development-engineer/blob/main/MobileAdaptation/rem/js/demo.html)
 
 通过js动态获取当前布局视口的宽度除以我们预定的值，得到并设置不同设备下`html`的`font-size`的大小
 
@@ -217,74 +217,112 @@ meta viewport 元标签的常用属性包括：
 
 OK！这里我们可以看到，选择不同设备进行测试时，根节点的`font-size`会随着设备的布局视口的宽度变化而变化，所以这里的元素宽度15rem永远等于当前布局视口的宽度，`font-size`也会随设备变化而变化。这就是所谓的移动端适配，其实这种方案最早是由阿里提出来的一个开源移动端适配解决方案`flexible`，原理非常简单。
 
-##### css媒体查询
+##### [css媒体查询](https://github.com/Pedro-Que/become-a-professional-front-end-development-engineer/blob/main/MobileAdaptation/rem/css/demo.html)
 
 使用css媒体查询直接设置一些常用设备下的`html`的`font-size`大小。
 
 ```css
+/* 命名为 adaptation.css */
 @media (min-width:240px) {
   html {
-    font-size: 16px
+    font-size: 16px;
   }
 }
 
 @media (min-width:320px) {
   html {
-    font-size: 21.33333333px
+    font-size: 21.33333333px;
   }
 }
 
 @media (min-width:360px) {
   html {
-    font-size: 24px
+    font-size: 24px;
   }
 }
 
 @media (min-width:375px) {
   html {
-    font-size: 25px
+    font-size: 25px;
   }
 }
 
 @media (min-width:384px) {
   html {
-    font-size: 25.6px
+    font-size: 25.6px;
   }
 }
 
 @media (min-width:400px) {
   html {
-    font-size: 26.66666667px
+    font-size: 26.66666667px;
   }
 }
 
 @media (min-width:411px) {
   html {
-    font-size: 27.4px
+    font-size: 27.4px;
   }
 }
 
 @media (min-width:414px) {
   html {
-    font-size: 27.6px
+    font-size: 27.6px;
   }
 }
 
 @media (min-width:424px) {
   html {
-    font-size: 28.26666667px
+    font-size: 28.26666667px;
   }
 }
 
 @media (min-width:480px) {
   html {
-    font-size: 32px
+    font-size: 32px;
   }
 }
 
 @media (min-width:540px) {
   html {
-    font-size: 36px
+    font-size: 36px;
   }
 }
 ```
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Document</title>
+  <!-- 使用上述文件 -->
+  <link rel="stylesheet" href="./adaptation.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .box {
+      width: 15rem;
+      height: 4rem;
+      font-size: .8rem;
+      background: #43c985;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">PedroQue99</div>
+</body>
+
+</html>
+```
+
+![iPhone6效果如图所示](https://upload-images.jianshu.io/upload_images/19735956-51453e3b7046cac6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![iPhone5效果如图所示](https://upload-images.jianshu.io/upload_images/19735956-8ab51059a0627133.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
