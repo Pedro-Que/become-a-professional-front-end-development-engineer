@@ -1,0 +1,19 @@
+@use "sass:math";
+
+// 适配主流设备
+$deviceList: 240px, 320px, 360px, 375px, 384px, 400px, 411px, 414px, 424px, 480px, 540px;
+// 预设基准值
+$baseFontSize: 25px;
+// 设计稿尺寸
+$psdWidth: 375px;
+
+// 移动端适配
+@mixin adapterMixin($index: 1) {
+  @for $index from 1 through length($deviceList) {
+    @media (min-width: nth($deviceList, $index)) {
+      html {
+        font-size: math.div($baseFontSize, $psdWidth) * nth($deviceList, $index);
+      }
+    }
+  }
+}
